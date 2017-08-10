@@ -52,7 +52,6 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-gem 'frontend-generators'
 gem 'jquery-rails'
 gem 'devise'
 gem 'rails_admin'
