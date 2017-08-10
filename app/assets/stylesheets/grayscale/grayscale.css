@@ -265,7 +265,7 @@ a:focus {
     width: 100%;
     padding: 50px 0;
     color: #fff;
-    background: url('/assets/grayscale/downloads-bg.jpg') no-repeat center center scroll;
+    background: url('/assets/grayscale/scoreboard-bg.jpg') no-repeat center center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -282,6 +282,17 @@ a:focus {
     width: 100%;
     height: 200px;
     margin-top: 100px;
+}
+
+.about-section {
+    p {
+        font-size: 45px; 
+    }
+    color: #b66c2d;
+}
+
+.qa-section {
+    background: url('/assets/grayscale/login-bg.jpg') no-repeat center center scroll;
 }
 
 @media(min-width:767px) {
