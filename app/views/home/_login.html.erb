@@ -4,10 +4,10 @@
             <h2>GİRİŞ</h2>
             <%= form_for(:user, :url => session_path(:user)) do |f| %>
               <div class="form-group">
-                <%= f.text_field :email, class: "form-control" %>
+                <%= f.text_field :email, placeholder: "Kullanıcı adı", class: "form-control" %>
               </div>
               <div class="form-group">
-                <%= f.password_field :password, class: "form-control" %>
+                <%= f.password_field :password, placeholder: "Parola", class: "form-control" %>
               </div>
               <%= f.submit 'BIRAK GEÇEYİM', class: "btn btn-block btn-default btn-lg" %>
               <%= link_to "Parolam neydi ki benim?", new_password_path(:user) %>
