@@ -53,3 +53,4 @@ end
 gem 'frontend-generators'
 gem 'jquery-rails'
 gem 'devise'
+gem 'rails_admin'
