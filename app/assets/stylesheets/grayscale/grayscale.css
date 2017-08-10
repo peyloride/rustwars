@@ -273,6 +273,11 @@ a:focus {
     -o-background-size: cover;
 }
 
+.login-section {
+    background: url('/assets/grayscale/login-bg.jpg') no-repeat center center scroll;
+    padding: 50px;
+}
+
 #map {
     width: 100%;
     height: 200px;
