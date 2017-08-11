@@ -32,7 +32,7 @@ h6 {
 
 p {
     margin: 0 0 25px;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 1.5;
 }
 
@@ -63,6 +63,7 @@ a:focus {
 
 .colored-text {
     color: #b66c2d;
+    font-size: 25px;
 }
 
 .navbar-custom {
@@ -126,6 +127,12 @@ a:focus {
     color: #fff;
 }
 
+.logo-image {
+    height: 32px;
+    padding-right: 5px;
+    display:inline !important;
+}
+
 @media(min-width:768px) {
     .navbar-custom {
         padding: 20px 0;
@@ -151,12 +158,20 @@ a:focus {
     padding: 100px 0;
     text-align: center;
     color: #fff;
-    background: url('/assets/grayscale/intro-bg.jpg') no-repeat bottom center scroll;
+    background: url('/assets/grayscale/intro-bg2.jpg') no-repeat bottom center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+}
+
+.rules-section {
+    font-size: 25px;
+}
+
+.rules-section li {
+    padding: 0px 0px 20px 0px;
 }
 
 .intro .intro-body {
@@ -227,7 +242,7 @@ a:focus {
     -moz-animation-timing-function: linear;
 }
 
-@-webkit-keyframes pulse {    
+@-webkit-keyframes pulse {
     0% {
         -webkit-transform: scale(1);
         transform: scale(1);
@@ -244,7 +259,7 @@ a:focus {
     }
 }
 
-@-moz-keyframes pulse {    
+@-moz-keyframes pulse {
     0% {
         -moz-transform: scale(1);
         transform: scale(1);
