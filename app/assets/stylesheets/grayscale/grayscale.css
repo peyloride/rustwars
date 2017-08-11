@@ -39,7 +39,7 @@ p {
 @media(min-width:768px) {
     p {
         margin: 0 0 35px;
-        font-size: 20px;
+        font-size: 25px;
         line-height: 1.6;
     }
 }
@@ -284,12 +284,9 @@ a:focus {
     padding: 50px;
 }
 
-.rules-section {
-    font-size: 20px;
-}
-
 .rules-section ul {
     list-style-type: none;
+    padding-left: 0px;
 }
 
 .rules-section li {
@@ -305,12 +302,12 @@ a:focus {
 }
 
 .qa-section {
+    padding: 50px 0px 50px 0px;
     background: url('/assets/grayscale/qa-bg.jpg') no-repeat center center scroll;
-    font-size: 25px;
-    padding: 50px;
 }
 
 .qa-section ul {
+    padding-left: 0px;
     list-style-type: none;
 }
 
@@ -328,7 +325,6 @@ a:focus {
 
 .about-section p {
     color: #95a5a6;
-    font-size: 25px;
 }
 
 
