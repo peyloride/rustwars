@@ -44,6 +44,26 @@ p {
     }
 }
 
+b{
+    font-size: 14px;
+}
+
+@media(min-width: 768px) {
+    b {
+        font-size: 25px;
+    }
+}
+
+i {
+    font-size: 14px;
+}
+
+@media(min-width: 768px) {
+    i {
+        font-size: 25px;
+    }
+}
+
 a {
     color: #42dca3;
     -webkit-transition: all .2s ease-in-out;
