@@ -19,12 +19,21 @@
                 <p>Bütün Takımlar</p>
             <% end %>
         </li>
-        <li class="<%= 'active' if current_page?(team_path(current_user.team)) %>">
-            <%= link_to team_path(current_user.team) do %>
-                <i class="pe-7s-users"></i>
-                <p>Takımım</p>
-            <% end %>
-        </li>
+        <% if current_user.team.nil? %>
+            <li>
+                <a href="">
+                    <i class="pe-7s-users"></i>
+                    <p>Henüz Takımın Yok</p>
+                </a>
+            </li>
+        <% else %>
+            <li class="<%= 'active' if current_page?(team_path(current_user.team)) %>">
+                <%= link_to team_path(current_user.team) do %>
+                    <i class="pe-7s-users"></i>
+                    <p>Takımım</p>
+                <% end %>
+            </li>
+        <% end %>
         <li class="<%= 'active' if current_page?(new_team_path) %>">
             <%= link_to new_team_path do %>
                 <i class="pe-7s-plus"></i>
