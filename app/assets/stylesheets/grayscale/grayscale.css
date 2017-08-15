@@ -301,7 +301,8 @@ a:focus {
 
 .login-section {
     background: url('/assets/grayscale/login-bg.jpg') no-repeat center center scroll;
-    padding: 50px 0 250px 0;
+    height: 600px;
+    padding: 50px 0 0 0;
 }
 
 .rules-section ul {
@@ -345,6 +346,10 @@ a:focus {
 
 .about-section p {
     color: #95a5a6;
+}
+
+.modal-content {
+    background-color: #3d4142;
 }
 
 
