@@ -10,10 +10,10 @@
             <div class="form-group">
               <%= f.password_field :password, placeholder: "Parola", class: "form-control" %>
             </div>
-            <%= f.submit 'BIRAK GEÇEYİM', class: "btn btn-block btn-default btn-lg" %>
-            <%= link_to "Parolam", new_password_path(:user) %> neydi ki benim?,
-            yok yok ben en iyisi
-            <%= link_to "kaydolayım", root_path, remote: true %>
+            <%= f.submit 'GİRİŞ', class: "btn btn-default btn-lg" %>
+            <%= link_to "KAYIT", root_path, remote: true, class: "btn  btn-default btn-lg" %>
+            <br>
+            <%= link_to "Parolam neydi ki benim?", new_password_path(:user) %>
           <% end %>
       </div>
     </div>
