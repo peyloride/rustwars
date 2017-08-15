@@ -1,0 +1,42 @@
+<div class="sidebar" data-color="black" data-image="assets/dashboard/sidebar.jpg">
+
+    <!--
+
+        Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple"
+        Tip 2: you can also add an image using data-image tag
+
+    -->
+
+  <div class="sidebar-wrapper">
+    <div class="logo">
+        <%= link_to "RustWars", root_path, class: "simple-text" %>
+    </div>
+
+    <ul class="nav">
+        <li class="<%= 'active' if current_page?(teams_path) %>">
+            <%= link_to teams_path do %>
+                <i class="pe-7s-note2"></i>
+                <p>Bütün Takımlar</p>
+            <% end %>
+        </li>
+        <li class="<%= 'active' if current_page?(team_path(current_user.team)) %>">
+            <%= link_to team_path(current_user.team) do %>
+                <i class="pe-7s-users"></i>
+                <p>Takımım</p>
+            <% end %>
+        </li>
+        <li class="<%= 'active' if current_page?(new_team_path) %>">
+            <%= link_to new_team_path do %>
+                <i class="pe-7s-plus"></i>
+                <p>Yeni Takım Oluştur</p>
+            <% end %>
+        </li>
+        <li>
+            <%= link_to destroy_user_session_path, method: :delete do %>
+                <i class="pe-7s-power"></i>
+                <p>Çıkış</p>
+            <% end %>
+        </li>
+    </ul>
+  </div>
+</div>
