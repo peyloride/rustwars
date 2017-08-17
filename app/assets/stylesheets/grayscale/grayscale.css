@@ -351,6 +351,12 @@ a:focus {
     background-color: #3d4142;
 }
 
+.devise-login {
+    height: 100%;
+    padding-top: 15%;
+    background: url('/assets/grayscale/login-bg.jpg') no-repeat center center scroll;
+}
+
 
 @media(min-width:767px) {
     .content-section {
