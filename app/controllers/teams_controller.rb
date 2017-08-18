@@ -27,9 +27,11 @@ class TeamsController < ApplicationController
   # POST /teams.json
   def create
     @team = Team.new(team_params)
+    @user = User.find(current_user.id)
 
     respond_to do |format|
       if @team.save
+        @user.update(team_id: @team.id)
         format.html { redirect_to @team, notice: 'Team was successfully created.' }
         format.json { render :show, status: :created, location: @team }
       else
