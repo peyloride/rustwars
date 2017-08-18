@@ -15,9 +15,9 @@
   <%= @team.is_active %>
 </p>
 
-<%= link_to 'Edit', edit_team_path(@team) %> |
-<%= link_to 'Back', teams_path %>
-
-<%= link_to 'Show', @team %>
-<%= link_to 'Edit', edit_team_path(@team) %>
-<%= link_to 'Destroy', @team, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% if can? :update, @team %>
+  <%= link_to "Düzenle", edit_team_path(@team) %>
+<% end %>
+<% if can? :destroy, @team %>
+  <%= link_to "Sil gitsin", team_path(@team), method: :delete, data: { confirm: 'Oğlum bak emin misin?'} %>
+<% end %>
