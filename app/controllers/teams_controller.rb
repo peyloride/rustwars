@@ -65,7 +65,7 @@ class TeamsController < ApplicationController
   # DELETE /teams/1.json
   def destroy
     @team.destroy
-    @user.update(team_id: nil)
+    current_user.update(team_id: nil)
     respond_to do |format|
       format.html { redirect_to teams_url, notice: 'Team was successfully destroyed.' }
       format.json { head :no_content }
