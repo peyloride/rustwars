@@ -20,7 +20,7 @@
             <% end %>
         </li>
         <% if current_user.team.nil? %>
-            <li>
+            <li class="disabled">
                 <a href="">
                     <i class="pe-7s-users"></i>
                     <p>Henüz Takımın Yok</p>
@@ -52,7 +52,7 @@
         <li>
             <%= link_to destroy_user_session_path, method: :delete do %>
                 <i class="pe-7s-power"></i>
-                <p>Çıkış</p>
+                <p>Çıkayım ben</p>
             <% end %>
         </li>
     </ul>
