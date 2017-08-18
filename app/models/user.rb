@@ -5,4 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   belongs_to :team, optional: true
+
+  def is_team_leader?
+    self.id == Team.find(self.team_id).team_leader_id
+  end
 end

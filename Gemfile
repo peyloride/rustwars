@@ -55,3 +55,4 @@ end
 gem 'jquery-rails'
 gem 'devise'
 gem 'rails_admin'
+gem 'cancancan', '~> 2.0'

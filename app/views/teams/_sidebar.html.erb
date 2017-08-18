@@ -1,4 +1,4 @@
-<div class="sidebar" data-color="black" data-image="assets/dashboard/sidebar.jpg">
+<div class="sidebar" data-color="black" data-image="/assets/dashboard/sidebar.jpg">
 
     <!--
 
@@ -34,12 +34,21 @@
                 <% end %>
             </li>
         <% end %>
-        <li class="<%= 'active' if current_page?(new_team_path) %>">
-            <%= link_to new_team_path do %>
-                <i class="pe-7s-plus"></i>
-                <p>Yeni Takım Oluştur</p>
-            <% end %>
-        </li>
+        <% if current_user.team_id.nil? %>
+            <li class="<%= 'active' if current_page?(new_team_path) %>">
+                <%= link_to new_team_path do %>
+                    <i class="pe-7s-plus"></i>
+                    <p>Yeni Takım Oluştur</p>
+                <% end %>
+            </li>
+        <% else %>
+            <li>
+                <a href="">
+                    <i class="pe-7s-close-circle"></i>
+                    <p>Zaten bir takımın var</p>
+                </a>
+            </li>
+        <% end %>
         <li>
             <%= link_to destroy_user_session_path, method: :delete do %>
                 <i class="pe-7s-power"></i>
