@@ -14,7 +14,7 @@
       <tr>
         <td><%= link_to "#{team.name.try(:capitalize)}", team_path(team) %></td>
         <td><%= team.tag %></td>
-        <td><%= team.users.count %></td>
+        <td><%= team.users.size %></td>
       </tr>
     <% end %>
   </tbody>
