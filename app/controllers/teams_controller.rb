@@ -18,6 +18,9 @@ class TeamsController < ApplicationController
   # GET /teams/new
   def new
     @team = Team.new
+    unless current_user.team_id.nil?
+      redirect_to teams_path
+    end
   end
 
   # GET /teams/1/edit
