@@ -12,7 +12,7 @@
   <tbody>
     <% @teams.each do |team| %>
       <tr>
-        <td><%= team.name %></td>
+        <td><%= link_to "#{team.name.try(:capitalize)}", team_path(team) %></td>
         <td><%= team.tag %></td>
         <td><%= team.users.count %></td>
       </tr>

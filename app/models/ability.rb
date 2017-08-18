@@ -31,8 +31,10 @@ class Ability
 
     if user.is_team_leader?
         can :manage, Team, :id => user.team_id
+        can :read, Team
     else
-        can [:read, :create], Team
+        can :read, :all
+        can :create, Team
     end
 
   end
