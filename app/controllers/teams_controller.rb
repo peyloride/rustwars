@@ -1,6 +1,6 @@
 class TeamsController < ApplicationController
   layout "teams"
-  before_action :set_team, only: [:show, :edit, :update, :destroy]
+  before_action :set_team, only: [:show, :join, :edit, :update, :destroy]
   before_action :authenticate_user!
   load_and_authorize_resource
 
@@ -13,6 +13,20 @@ class TeamsController < ApplicationController
   # GET /teams/1
   # GET /teams/1.json
   def show
+  end
+
+  #Let user join a team
+  def join
+    if current_user.update(team_id: @team.id)
+      redirect_to @team, notice: 'Yeni takımın hayırlı olsun'
+    end
+  end
+
+  #Let user leave his/her team
+  def leave
+    if current_user.update(team_id: nil)
+      redirect_to @team, notice: 'Bekarlık sultanlıktır derler'
+    end
   end
 
   # GET /teams/new

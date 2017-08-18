@@ -15,6 +15,12 @@
   <%= @team.is_active %>
 </p>
 
+<% if current_user.team_id.nil? %>
+  <%= link_to "Bu takım iyi buna katılayım", join_team_path(@team), method: :post %>
+<% end %>
+<% if current_user.team_id == @team.id %>
+  <%= link_to "Ben sıkıldım bu takımdan yea", leave_team_path(@team), method: :delete %>
+<% end %>
 <% if can? :update, @team %>
   <%= link_to "Düzenle", edit_team_path(@team) %>
 <% end %>

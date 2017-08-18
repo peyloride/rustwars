@@ -33,8 +33,7 @@ class Ability
         can :manage, Team, :id => user.team_id
         can :read, Team
     else
-        can :read, :all
-        can :create, Team
+        can [:read, :create, :join, :leave], Team
     end
 
   end
